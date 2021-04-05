@@ -17,5 +17,5 @@ def country_list():
 
 @app.errorhandler(404)
 def not_found(e):
-    return jsonify(error='Not found'), 404
+    return jsonify(error='Page not found. The list of countries is at https://country-list-1150.herokuapp.com/api/country'), 404
 
