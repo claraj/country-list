@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, abort
+from flask import Flask, request, jsonify
 import requests 
 
 app = Flask(__name__)
@@ -17,5 +17,5 @@ def country_list():
 
 @app.errorhandler(404)
 def not_found(e):
-    return jsonify(error='Page not found. The list of countries is at https://country-list-1150.herokuapp.com/api/country'), 404
+    return jsonify(error='Page not found. The list of countries is at http://country-list-1150.azurewebsites.net/api/country'), 404
 
